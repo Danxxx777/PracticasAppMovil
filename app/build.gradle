@@ -35,7 +35,7 @@ android {
 dependencies {
 
     def lottieVersion = "6.7.1"
-    implementation libs.lottie
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
 
     implementation libs.activity.ktx
