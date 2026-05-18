@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App01">
         <activity
+            android:name=".App03"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".App3"
+            android:exported="false" />
+        <activity
             android:name=".actlogin"
             android:exported="true">
             <intent-filter>
