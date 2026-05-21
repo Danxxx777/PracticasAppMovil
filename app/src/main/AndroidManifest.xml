@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App01">
         <activity
-            android:name=".App03"
+            android:name=".resultadousuarios"
+            />
+        <activity
+            android:name=".registrousuarios"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +27,7 @@
             android:name=".App3"
             android:exported="false" />
         <activity
-            android:name=".actlogin"
+            android:name=".login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".robot"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

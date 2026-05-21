@@ -7,52 +7,54 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="#FDFDFD"
-    tools:context=".actlogin">
+    tools:context=".login"
+    tools:ignore="ContentDescription,HardcodedText,TextContrastCheck">
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="260dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="284dp"
+        android:layout_height="87dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="463dp"
         android:background="#FDF9F9"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="Logo"
+        app:layout_constraintBottom_toTopOf="@+id/txtInicioSesion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344"
         app:srcCompat="@drawable/img_1" />
 
     <TextView
-        android:id="@+id/txtIniciarSesion"
+        android:id="@+id/txtInicioSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="#FBFAFA"
         android:text="Iniciar Sesión"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tilCorreo"
         app:layout_constraintEnd_toEndOf="@+id/imgLogo"
         app:layout_constraintStart_toStartOf="@+id/imgLogo"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="381dp"
-        android:layout_height="58dp"
+        android:id="@+id/tilCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tilContrasena"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/txtInicioSesion"
         app:startIconDrawable="@drawable/mail"
         app:startIconTint="#F08D0B">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo Electronico"
@@ -60,95 +62,97 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/tilContrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:duplicateParentState="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#F08D0B"
         app:startIconDrawable="@drawable/password"
         app:startIconTint="#F08D0B">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
-            android:password="true"
+            android:inputType="textPassword"
             android:textColor="#F08D0B" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="381dp"
-        android:layout_height="50dp"
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:text="Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/tilContrasena"
         app:layout_constraintVertical_bias="0.052" />
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/llBotonesSociales"
+        android:layout_width="231dp"
+        android:layout_height="58dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.193">
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+        app:layout_constraintVertical_bias="0.067">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGoogle"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:backgroundTint="@color/white"
+            android:contentDescription="Iniciar con Google"
             app:icon="@drawable/google"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
             app:iconSize="32dp"
-            app:iconTint="@null"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+            app:iconTint="@null" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFacebook"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:backgroundTint="@color/white"
-
+            android:contentDescription="Iniciar con Facebook"
             app:icon="@drawable/facebook"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
             app:iconSize="32dp"
-            app:iconTint="@null"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+            app:iconTint="@null" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGithub"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:backgroundTint="@color/white"
-
+            android:contentDescription="Iniciar con Github"
             app:icon="@drawable/github"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
             app:iconSize="32dp"
-            app:iconTint="@null"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+            app:iconTint="@null" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".robot">
 
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="310dp"
-        android:layout_height="406dp"
+        android:layout_width="357dp"
+        android:layout_height="257dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -25,8 +25,8 @@
 
     <Button
         android:id="@+id/btnEntrar"
-        android:layout_width="163dp"
-        android:layout_height="60dp"
+        android:layout_width="129dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="#4CAF50"
         android:text="Entrar"
