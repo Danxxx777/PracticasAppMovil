@@ -2,15 +2,15 @@ package com.example.app01
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.app01.databinding.ActivityResultadoBinding
+import com.example.app01.databinding.ResultadousuariosBinding
 
 class resultadousuarios : AppCompatActivity() {
 
-    private lateinit var binding: ActivityResultadoBinding
+    private lateinit var binding: ResultadousuariosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityResultadoBinding.inflate(layoutInflater)
+        binding = ResultadousuariosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.tvNombres.text   = "Nombres: ${intent.getStringExtra("nombres")}"

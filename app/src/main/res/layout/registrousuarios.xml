@@ -36,8 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBotones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -142,7 +141,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 app:startIconDrawable="@drawable/identificacion">
-
                 <AutoCompleteTextView
                     android:id="@+id/acTipoDoc"
                     android:layout_width="match_parent"
@@ -161,7 +159,6 @@
                 app:startIconDrawable="@drawable/identificacion"
                 app:counterEnabled="true"
                 app:counterMaxLength="10">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNumDoc"
                     android:layout_width="match_parent"
@@ -225,8 +222,9 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Botones fijos abajo -->
+    <!-- Botones abajo -->
     <LinearLayout
+        android:id="@+id/layoutBotones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

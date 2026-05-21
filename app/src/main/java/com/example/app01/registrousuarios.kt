@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.app01.databinding.ActivityApp03Binding
+import com.example.app01.databinding.RegistrousuariosBinding
 import java.util.Calendar
 
 class registrousuarios : AppCompatActivity() {
 
-    private lateinit var binding: ActivityApp03Binding
+    private lateinit var binding: RegistrousuariosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityApp03Binding.inflate(layoutInflater)
+        binding = RegistrousuariosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //documento
